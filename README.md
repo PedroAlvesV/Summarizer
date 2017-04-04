@@ -8,7 +8,7 @@ This is just a tiny hobby project to write a bit of JavaScript. I'm still improv
 
 ## Running
 
-* It's currently running at [pedroalvesv.github.io/Summarizer](pedroalvesv.github.io/Summarizer).
+* It's currently running at [https://pedroalvesv.github.io/Summarizer](https://pedroalvesv.github.io/Summarizer).
 
 ## License
 
