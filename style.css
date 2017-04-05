@@ -9,6 +9,11 @@ a:hover {
   color: #fff;
 }
 
+.cover-heading:focus,
+.cover-heading:hover{
+   text-decoration: underline;
+}
+
 /* Custom default button */
 .btn-secondary{
   text-shadow: none; /* Prevent inheritance from `body` */
