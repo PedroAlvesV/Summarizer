@@ -3,6 +3,10 @@ function getSeedElement(index) {
   return Number(seed[seed.length-index]);
 }
 
+function makeAdjective(expression){
+  return expression.replace(/ /g,"-");
+}
+
 function summarizeText(name, whatIs, objective, lang, public, id) {
   if ((name == "") || (whatIs == "") || (objective == "")){
     alert("Fill the necessary fields.");
@@ -31,16 +35,16 @@ function summarizeText(name, whatIs, objective, lang, public, id) {
         break;
       case 4:
       case 5:
-        summary += objective + ", " + whatIs;
+        summary += makeAdjective(objective) + ", " + whatIs;
         if (lang !== "")
           summary += " in " + lang;
         break;
       case 6:
       case 7:
         if (lang !== "")
-          summary += objective + " " + lang + " " + whatIs;
+          summary += makeAdjective(objective) + " " + lang + " " + whatIs;
         else
-          summary += objective + " " + whatIs;
+          summary += makeAdjective(objective) + " " + whatIs;
         break;
       default:
         summary += whatIs + " to " + objective;
