@@ -8,15 +8,20 @@ function makeAdjective(expression){
 }
 
 function summarizeText(name, whatIs, objective, lang, public, id) {
-  if ((name == "") || (whatIs == "") || (objective == "")){
+  if ((whatIs == "") || (objective == "")){
     alert("Fill the necessary fields.");
     return null;
   }
   whatIs = whatIs.toLowerCase();
   objective = objective.toLowerCase();
   public = public.toLowerCase();
-  var starting_summary = name + " is ";
-  starting_summary += getSeedElement(2) % 2 == 0 ? "the " : "a " ;
+  var starting_summary = ""
+  if ((name != "") && (getSeedElement(2) < 8))
+    starting_summary = name + " is ";
+  if (starting_summary == "")
+    starting_summary = getSeedElement(2) % 2 == 0 ? "The " : "A " ;
+  else
+    starting_summary += getSeedElement(2) % 2 == 0 ? "the " : "a " ;
   function buildSummary(){
     var summary = starting_summary
     switch (getSeedElement(1)) {
