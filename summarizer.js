@@ -55,6 +55,7 @@ function summarizeText(name, whatIs, objective, lang, public, id) {
         summary += whatIs + " to " + objective;
 //        return "sorry, i'm working on more combinations (try again)"
     }
+    summary = summary.replace(/ a (a|e|i|o|u)+/g, ' an $1');
     if ((public !== "") && (getSeedElement(2) % 2 == 0)) {
       summary += " for " + public;
     }
